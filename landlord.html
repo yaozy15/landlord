@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="landlord.css" />
+        <title>斗地主</title>
+    </head>
+    <body>
+        <div id="center">
+            <div id="backimg"></div>
+            <button id="restart" onclick="G.startGame();">再来一局</button>
+            <div id="special">
+                <div id="special1" class="specialcard"></div>
+                <div id="special2" class="specialcard"></div>
+                <div id="special3" class="specialcard last"></div>
+            </div>
+            <div id="leftplayer"></div>
+            <div id="rightplayer"></div>
+            <div id="handcard"></div>
+            <div id="leftout">
+            </div>
+            <div id="leftcardtype"></div>
+            <div id="rightout">
+            </div>
+            <div id="rightcardtype"></div>
+            <div id="myout">
+            </div>
+            <div id="owncardtype"></div>
+            <ul id="claimButtons">
+                <li><button id="one" onclick="playerClaimScore(this.id);">1分</button></li>
+                <li><button id="two" onclick="playerClaimScore(this.id);">2分</button></li>
+                <li><button id="three" onclick="playerClaimScore(this.id);">3分</button></li>
+                <li><button id="no"  onclick="playerClaimScore(this.id);">不叫</button></li>
+            </ul>
+            <div id="leftidentity" class="identity"></div>
+            <div id="rightidentity" class="identity"></div>
+            <div id="ownidentity" class="identity"></div>
+            <div id="ownPlayButtons">
+                <button id="pass" onclick="G.cardUI.notPlayEvent();"></button>
+                <button id="tip" onclick="G.cardUI.tipEvent();"></button>
+                <button id="playcard" onclick="G.cardUI.playEvent();"></button>
+            </div>
+            <div id="lefttip"></div>
+            <div id="righttip"></div>
+            <div id="owntip"></div>
+            <div id="leftscore" class="score">500分</div>
+            <div id="rightscore" class="score">500分</div>
+            <div id="ownscore" class="score">500分</div>
+            <div id="score_times">底分：<span id="bottomscore">0</span>&emsp;&emsp;倍数：<span id="times">1</span></div>
+            <div id="tableback"></div>
+            <table id="overtable">   
+                <thead>  
+                    <tr>  
+                        <th>玩家  
+                        <th>本局得分  
+                        <th>当前分数 
+                </thead>  
+                <tbody>  
+                    <tr>  
+                        <td>AI-left  
+                        <td id="leftAIchange">  
+                        <td id="leftAIscore"> 
+                    <tr>  
+                        <td>AI-right  
+                        <td id="rightAIchange">  
+                        <td id="rightAIscore">  
+                    <tr id="playertr">  
+                        <td>Player  
+                        <td id="Playerchange">  
+                        <td id="Playerscore">
+                </tbody> 
+            </table>  
+            <div id="notecard">
+                <div id= '17'></div>
+                <div id = '16'></div>
+                <div id = '15'></div>
+                <div id = '14'></div>
+                <div id = '13'></div>
+                <div id = '12'></div>
+                <div id = '11'></div>
+                <div id = '10'></div>
+                <div id = '9'></div>
+                <div id = '8'></div>
+                <div id = '7'></div>
+                <div id = '6'></div>
+                <div id = '5'></div>
+                <div id = '4'></div>
+                <div id = '3'></div>
+            </div>
+            <div id="plane"></div>
+            <div id="rocket"></div>
+            <button id="notecardswitch" onclick="G.showNoteCard();"></button>
+        </div>
+        <div id = "beginScene">
+            <button id="start" onclick="G.startEvent();"></button>
+        </div>
+        <script type="text/javascript" src="script/soundmanager2-nodebug-jsmin.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="test.js"></script>
+        <script type="text/javascript" src="t.js"></script>
+        </body>
+</html>

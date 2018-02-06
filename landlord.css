@@ -1,0 +1,521 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    outline: none;
+}
+
+#restart {
+    position: absolute;
+    left: 80%;
+    top: 425px;
+    width: 104px;
+    height: 37px;
+    transform: translate(-50%, 0);
+    border: 0px;
+    color: white;
+    font-size: 18px;
+    background: url("image/button_green.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+
+#restart:hover {
+    background: url("image/button_brown.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+
+#center {
+    display:none; 
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    height: 730px;
+    background: url("image/game_bg.jpg") no-repeat left top;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+#backimg {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    width: 193px;
+    height: 224px;
+    transform: translate(-50%, -50%);
+    background: url("image/11.png") no-repeat left top;
+}
+
+#handcard {
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    height: 130px;
+    transform: translate(-50%, 0);
+    white-space: nowrap;
+}
+
+#beginScene{
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    height: 730px;
+    background: url("image/hn.png");
+    background-size:100% 100%;
+}
+
+#start {
+    position: absolute;
+    width: 286px;
+    height: 97px;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0;
+    outline: none;
+    background: url("image/ksks.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+
+#start:hover {
+    background: url("image/ksks1.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+
+#handcard .mycard {
+    display: inline-block;
+    position: relative;
+    margin-left: -82px;
+    width: 110px;
+    height: 157px;
+    background-size: 100% 100%;
+}
+
+#handcard .mycard.first {
+    margin-left: 0;
+}
+
+#leftplayer {
+    position: absolute;
+    top: 42%;
+    left: 50px;
+    transform: translate(0, -50%);
+}
+
+#rightplayer {
+    position: absolute;
+    top: 42%;
+    right: 50px;
+    transform: translate(0, -50%);
+}
+
+#leftplayer .cardback, #rightplayer .cardback {
+    margin-top: -89px;
+    width: 77px;
+    height: 110px;
+    background: url("image/cardback.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+
+#leftplayer .cardback.first, #rightplayer .cardback.first {
+    margin-top: 0;
+}
+
+.remainnum {
+    margin-top: 10px;
+    text-align: center;
+    font-family: "SimHei", "Microsoft YaHei", "SimSun";
+    font-size: 14px;
+    color: white;
+}
+
+#leftremain, #rightremain {
+    font-family: "SimHei";
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
+}
+
+#special {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);   
+}
+
+#special .specialcard {
+    display: inline-block;
+    margin-right: 20px;
+    width: 77px;
+    height: 110px;
+    background: url("image/cardback.png") no-repeat left top;
+    background-size: 100% 100%;
+    /* border: 1.5px solid white; */
+    border-radius: 5px;
+}
+
+#special .specialcard.last {
+    margin-right: 0;
+}
+
+#claimButtons {
+    display: none;
+    position: absolute;
+    top: 385px;
+    left: 48.5%;
+    transform: translate(-50%, 0);
+    cursor: default;
+}
+
+#claimButtons li {
+     list-style: none; 
+     display: inline-block;
+     margin: 5px;
+}
+
+#claimButtons button {
+    margin: 10px;
+    width: 84px;
+    height: 37px;
+    border: 0px;
+    color: white;
+    font-size: 18px;
+    background: url("image/button_green.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+
+#claimButtons button:hover {
+    cursor: pointer;
+    background: url("image/button_brown.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+
+#ownPlayButtons {
+    display: none;
+    position: absolute;
+    top: 415px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#ownPlayButtons button {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#pass {
+    width: 84px;
+    height: 40px;
+    border: 0px;
+    background: url("image/notplay_able.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+
+#pass:hover {
+    background: url("image/notplay.png") no-repeat left top;
+    background-size: 100% 100%;   
+}
+
+#tip {
+    width: 84px;
+    height: 40px;
+    border: 0px;
+    background: url("image/tip_able.png") no-repeat left top;
+    background-size: 100% 100%;    
+}
+
+#tip:hover {
+    background: url("image/tip.png") no-repeat left top;
+    background-size: 100% 100%;    
+}
+
+#playcard {
+    width: 84px;
+    height: 40px;
+    border: 0px;
+    background: url("image/play_able.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+
+#playcard:hover {
+    background: url("image/play.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+
+#leftout {
+    position: absolute;
+    top: 160px;
+    left: 300px;
+}
+
+#rightout {
+    position: absolute;
+    top: 160px;
+    right: 300px;
+}
+
+#myout {
+    position: absolute;
+    top: 280px;
+    left: 48%;
+    transform: translate(-50%, 0);
+}
+
+#rightout .outcard {
+    display: inline-block;
+    margin-left: -43px;
+    width: 60px;
+    height: 85.7px;
+}
+
+#leftout .outcard, #myout .outcard {
+    display: inline-block;
+    margin-right: -43px;
+    width: 60px;
+    height: 85.7px;
+}
+
+.identity {
+    width: 99px;
+    height: 97px;
+}
+
+#leftidentity {
+    position: absolute;
+    top: 100px;
+    left: 150px;
+}
+
+#rightidentity {
+    position: absolute;
+    top: 100px;
+    right: 150px;
+}
+
+#ownidentity {
+    position: absolute;
+    top: 565px;
+    left: 210px;
+}
+
+.score {
+    color: white;
+    font-family: "SimHei"; 
+    font-size: 18px;   
+}
+
+#leftscore {
+    position: absolute;
+    top: 75px;
+    left: 150px;
+}
+
+#rightscore {
+    position: absolute;
+    top: 75px;
+    right: 150px;
+}
+
+#ownscore {
+    position: absolute;
+    top: 660px;
+    left: 210px;
+}
+
+#score_times {
+    position: absolute;
+    top: 670px;
+    left: 80%;
+    transform: translate(-50%, 0);
+    color: white;
+    font-family: "SimHei";
+    font-size: 26px;    
+}
+
+#lefttip, #righttip, #owntip {
+    color: yellow;
+    font-family: "Microsoft YaHei", "KaiTi";    
+    font-size: 32px;
+}
+
+#lefttip {
+    position: absolute;
+    top: 200px;
+    left: 290px;
+}
+
+#righttip {
+    position: absolute;
+    top: 200px;
+    right: 290px;
+}
+
+#owntip {
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#tableback {
+    display: none;
+    position: absolute;
+    left: 52.5%;
+    top: 87px;
+    transform: translate(-50%, 0);
+    width: 450px;
+    height: 467.5px;   
+}
+
+table {  
+    display: none;  
+    position: absolute;
+    left: 50%;
+    top: 190px;
+    transform: translate(-50%, 0);
+    text-align: center;  
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;  
+}  
+  
+/* caption {  
+    font-size: larger;
+    color: white;  
+    margin: 1em auto; 
+    background: red; 
+} */
+  
+th, td {  
+     padding: .65em;
+}  
+
+th, tr {
+    color: white;
+}
+
+tr:last-child {
+    font-weight: bold;
+    color: yellow;
+}
+  
+th:first-child {  
+    border-radius: 9px 0 0 0;  
+}  
+  
+th:last-child {  
+    border-radius: 0 9px 0 0;  
+}  
+  
+tr:last-child td:first-child {  
+    border-radius: 0 0 0 9px;  
+}  
+  
+tr:last-child td:last-child {  
+    border-radius: 0 0 9px 0;  
+}  
+
+#test {
+    opacity: 1;
+    color: white;
+    font-size: 40px;
+    transition: all 2s;
+}
+
+#notecard {
+    visibility: hidden;
+    position: absolute;
+    left: 80px;
+    top: 10px;
+    width: 326.5px;
+    height: 41.5px;
+    background: url("image/notecard.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+
+#notecard div {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 16px;
+    font-size: 15px;
+}
+
+#notecard :nth-child(1) {
+    margin-left: 30px;
+}
+
+#notecard :nth-child(2) {
+    margin-left: 9px;
+}
+
+#notecard :last-child {
+    margin-left: 4px;
+}
+
+#leftcardtype, #rightcardtype, #owncardtype {
+    opacity: 0;
+    width: 300px;
+    height: 61.2px;
+    transition: opacity .5s;
+}
+
+#leftcardtype {
+    position: absolute;
+    top: 190px;
+    left: 240px;
+}
+
+#rightcardtype {
+    position: absolute;
+    top: 190px;
+    right: 240px;
+}
+
+#owncardtype {
+    position: absolute;
+    top: 310px;
+    left: 48%;
+    transform: translate(-50%, 0);
+}
+
+#plane {
+    visibility: hidden;
+    position: absolute;
+    top: 46%;
+    left: 1200px;
+    transform: translate(0, -50%);
+    width: 209.5px;
+    height: 98.5px;
+    background: url("image/plane.png") no-repeat left top;
+    background-size: 100% 100%;
+    transition: left 4s;
+}
+
+#notecardswitch {
+    position: absolute;
+    left: 980px;
+    top: 560px;
+    width: 80px;
+    height: 33px;
+    background: url("image/ncbutton.png") no-repeat left top;
+    background-size: 100% 100%;
+    border: 0;
+}
+
+#notecardswitch:hover {
+    background: url("image/ncbutton1.png") no-repeat left top;
+    background-size: 100% 100%;    
+}
+
+#rocket {
+    visibility: hidden;
+    position: absolute;
+    top: 732px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 61px;
+    height: 173px;
+    background: url("image/huojian.png") no-repeat left top;
+    background-size: 100% 100%;
+    transition: top 3s;
+}
